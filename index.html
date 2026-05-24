@@ -1,184 +1,231 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SMK Katolik 2 W.R. Soepratman Samarinda</title>
 
-<title>Risan Chat App</title>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family:Arial, sans-serif;
+    }
 
-<style>
+    body{
+      background:#f4f4f4;
+      color:#222;
+    }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial;
-}
+    header{
+      background:#002b7f;
+      color:white;
+      text-align:center;
+      padding:40px 20px;
+    }
 
-body{
-    background:#0f172a;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-}
+    header h1{
+      font-size:38px;
+      margin-bottom:10px;
+    }
 
-/* BOX CHAT */
+    nav{
+      background:#001b52;
+      padding:15px;
+      text-align:center;
+    }
 
-.chat-box{
-    width:350px;
-    height:600px;
-    background:#111827;
-    border-radius:20px;
-    overflow:hidden;
-    box-shadow:0 0 20px rgba(0,0,0,0.5);
-    display:flex;
-    flex-direction:column;
-}
+    nav a{
+      color:white;
+      text-decoration:none;
+      margin:0 15px;
+      font-weight:bold;
+    }
 
-/* HEADER */
+    .hero{
+      background:linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('foto-sekolah.jpg');
+      background-size:cover;
+      background-position:center;
+      height:450px;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      color:white;
+      padding:20px;
+    }
 
-.header{
-    background:cyan;
-    color:black;
-    padding:20px;
-    text-align:center;
-    font-size:22px;
-    font-weight:bold;
-}
+    .hero h2{
+      font-size:40px;
+      background:rgba(0,0,0,0.5);
+      padding:20px;
+      border-radius:10px;
+    }
 
-/* CHAT AREA */
+    section{
+      max-width:1100px;
+      margin:auto;
+      padding:50px 20px;
+    }
 
-.chat-area{
-    flex:1;
-    padding:15px;
-    overflow-y:auto;
-}
+    h2{
+      color:#002b7f;
+      margin-bottom:20px;
+      text-align:center;
+    }
 
-/* MESSAGE */
+    .card-container{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
 
-.message{
-    background:#1e293b;
-    padding:12px;
-    border-radius:15px;
-    margin:10px 0;
-    max-width:80%;
-    color:white;
-    animation:muncul 0.3s ease;
-}
+    .card{
+      background:white;
+      padding:25px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      text-align:center;
+    }
 
-.me{
-    background:cyan;
-    color:black;
-    margin-left:auto;
-}
+    .card h3{
+      color:#002b7f;
+      margin-bottom:10px;
+    }
 
-/* INPUT */
+    .gallery img{
+      width:100%;
+      border-radius:15px;
+      margin-top:20px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.2);
+    }
 
-.input-area{
-    display:flex;
-    padding:10px;
-    background:#0f172a;
-}
+    .btn{
+      display:inline-block;
+      background:gold;
+      color:black;
+      padding:12px 25px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:bold;
+      margin-top:20px;
+    }
 
-input{
-    flex:1;
-    padding:12px;
-    border:none;
-    border-radius:30px;
-    outline:none;
-}
-
-button{
-    margin-left:10px;
-    padding:12px 20px;
-    border:none;
-    border-radius:30px;
-    background:cyan;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-/* ANIMASI */
-
-@keyframes muncul{
-
-from{
-    opacity:0;
-    transform:translateY(10px);
-}
-
-to{
-    opacity:1;
-    transform:translateY(0);
-}
-
-}
-
-</style>
+    footer{
+      background:#002b7f;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+  </style>
 </head>
-
 <body>
 
-<div class="chat-box">
+  <header>
+    <h1>SMK Katolik 2 W.R. Soepratman Samarinda</h1>
+    <p>Sekolah Unggulan & Siap Kerja</p>
+  </header>
 
-<div class="header">
-💬 Risan Chat
-</div>
+  <nav>
+    <a href="#tentang">Tentang</a>
+    <a href="#jurusan">Jurusan</a>
+    <a href="#fasilitas">Fasilitas</a>
+    <a href="#galeri">Galeri</a>
+    <a href="#kontak">Kontak</a>
+  </nav>
 
-<div class="chat-area" id="chatArea">
+  <div class="hero">
+    <h2>SPMB 2026/2027 TELAH DIBUKA</h2>
+  </div>
 
-<div class="message">
-Halo 👋
-</div>
+  <section id="tentang">
+    <h2>Tentang Sekolah</h2>
 
-</div>
+    <p>
+      SMK Katolik 2 W.R. Soepratman Samarinda adalah sekolah kejuruan
+      yang memiliki program pendidikan unggulan untuk membentuk siswa
+      yang disiplin, kreatif, dan siap kerja.
+    </p>
+  </section>
 
-<div class="input-area">
+  <section id="jurusan">
+    <h2>Konsentrasi Keahlian</h2>
 
-<input type="text"
-id="messageInput"
-placeholder="Ketik pesan...">
+    <div class="card-container">
 
-<button onclick="sendMessage()">
-Kirim
-</button>
+      <div class="card">
+        <h3>Akuntansi</h3>
+        <p>Belajar administrasi dan keuangan perusahaan.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>Teknik Komputer</h3>
+        <p>Mempelajari jaringan komputer dan teknologi digital.</p>
+      </div>
 
-</div>
+      <div class="card">
+        <h3>Farmasi</h3>
+        <p>Belajar kesehatan dan dunia obat-obatan.</p>
+      </div>
 
-<script>
+      <div class="card">
+        <h3>Asisten Keperawatan</h3>
+        <p>Pelatihan pelayanan kesehatan dan pasien.</p>
+      </div>
 
-function sendMessage(){
+    </div>
+  </section>
 
-const input =
-document.getElementById("messageInput");
+  <section id="fasilitas">
+    <h2>Fasilitas Sekolah</h2>
 
-const chatArea =
-document.getElementById("chatArea");
+    <div class="card-container">
 
-if(input.value.trim() !== ""){
+      <div class="card">
+        <h3>Lab Komputer</h3>
+      </div>
 
-const msg =
-document.createElement("div");
+      <div class="card">
+        <h3>Lapangan Futsal</h3>
+      </div>
 
-msg.classList.add("message","me");
+      <div class="card">
+        <h3>Lapangan Volly</h3>
+      </div>
 
-msg.innerText = input.value;
+      <div class="card">
+        <h3>Aula Sekolah</h3>
+      </div>
 
-chatArea.appendChild(msg);
+      <div class="card">
+        <h3>Asrama Putra & Putri</h3>
+      </div>
 
-chatArea.scrollTop =
-chatArea.scrollHeight;
+    </div>
+  </section>
 
-input.value = "";
+  <section id="galeri" class="gallery">
+    <h2>Galeri Sekolah</h2>
 
-}
+    <img src="foto-sekolah.jpg" alt="Galeri Sekolah">
 
-}
+  </section>
 
-</script>
+  <section id="kontak">
+    <h2>Kontak Sekolah</h2>
+
+    <p>📍 Samarinda, Kalimantan Timur</p>
+    <p style="margin-top:10px;">📞 0853-3282-7652</p>
+
+    <a href="#" class="btn">Daftar Sekarang</a>
+  </section>
+
+  <footer>
+    <p>© 2026 SMK Katolik 2 W.R. Soepratman Samarinda</p>
+  </footer>
 
 </body>
 </html>
