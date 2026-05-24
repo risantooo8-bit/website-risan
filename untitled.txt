@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Risan Chat App</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+
+/* BOX CHAT */
+
+.chat-box{
+    width:350px;
+    height:600px;
+    background:#111827;
+    border-radius:20px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(0,0,0,0.5);
+    display:flex;
+    flex-direction:column;
+}
+
+/* HEADER */
+
+.header{
+    background:cyan;
+    color:black;
+    padding:20px;
+    text-align:center;
+    font-size:22px;
+    font-weight:bold;
+}
+
+/* CHAT AREA */
+
+.chat-area{
+    flex:1;
+    padding:15px;
+    overflow-y:auto;
+}
+
+/* MESSAGE */
+
+.message{
+    background:#1e293b;
+    padding:12px;
+    border-radius:15px;
+    margin:10px 0;
+    max-width:80%;
+    color:white;
+    animation:muncul 0.3s ease;
+}
+
+.me{
+    background:cyan;
+    color:black;
+    margin-left:auto;
+}
+
+/* INPUT */
+
+.input-area{
+    display:flex;
+    padding:10px;
+    background:#0f172a;
+}
+
+input{
+    flex:1;
+    padding:12px;
+    border:none;
+    border-radius:30px;
+    outline:none;
+}
+
+button{
+    margin-left:10px;
+    padding:12px 20px;
+    border:none;
+    border-radius:30px;
+    background:cyan;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* ANIMASI */
+
+@keyframes muncul{
+
+from{
+    opacity:0;
+    transform:translateY(10px);
+}
+
+to{
+    opacity:1;
+    transform:translateY(0);
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="chat-box">
+
+<div class="header">
+💬 Risan Chat
+</div>
+
+<div class="chat-area" id="chatArea">
+
+<div class="message">
+Halo 👋
+</div>
+
+</div>
+
+<div class="input-area">
+
+<input type="text"
+id="messageInput"
+placeholder="Ketik pesan...">
+
+<button onclick="sendMessage()">
+Kirim
+</button>
+
+</div>
+
+</div>
+
+<script>
+
+function sendMessage(){
+
+const input =
+document.getElementById("messageInput");
+
+const chatArea =
+document.getElementById("chatArea");
+
+if(input.value.trim() !== ""){
+
+const msg =
+document.createElement("div");
+
+msg.classList.add("message","me");
+
+msg.innerText = input.value;
+
+chatArea.appendChild(msg);
+
+chatArea.scrollTop =
+chatArea.scrollHeight;
+
+input.value = "";
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
