@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SPMB SMK Katolik 2 WR Soepratman Samarinda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    background:#071329;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* HEADER */
+
+header{
+    width:100%;
+    min-height:100vh;
+    background:
+    linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.7)),
+    url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?q=80&w=1400');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px;
+}
+
+.hero{
+    max-width:900px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:800;
+    color:#ffd700;
+    text-shadow:0 0 25px #ffd700;
+}
+
+.hero h2{
+    font-size:35px;
+    margin-top:10px;
+    color:#fff;
+}
+
+.hero p{
+    margin-top:20px;
+    font-size:18px;
+    color:#ddd;
+}
+
+.btn-group{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    padding:15px 35px;
+    border:none;
+    border-radius:50px;
+    font-size:17px;
+    font-weight:bold;
+    cursor:pointer;
+    transition:0.4s;
+    text-decoration:none;
+}
+
+.btn-daftar{
+    background:linear-gradient(45deg,#00c6ff,#0072ff);
+    color:white;
+    box-shadow:0 0 20px #00c6ff;
+}
+
+.btn-wa{
+    background:linear-gradient(45deg,#25d366,#0f9d58);
+    color:white;
+    box-shadow:0 0 20px #25d366;
+}
+
+.btn:hover{
+    transform:translateY(-5px) scale(1.05);
+}
+
+/* SECTION */
+
+section{
+    padding:80px 10%;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:50px;
+    color:#ffd700;
+    text-shadow:0 0 15px #ffd700;
+}
+
+/* JURUSAN */
+
+.jurusan-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:25px;
+    padding:25px;
+    text-align:center;
+    transition:0.4s;
+    box-shadow:0 0 20px rgba(0,191,255,0.2);
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px rgba(0,191,255,0.7);
+}
+
+.card img{
+    width:90px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    margin-bottom:10px;
+    color:#00c6ff;
+}
+
+/* FORM */
+
+.form-box{
+    max-width:700px;
+    margin:auto;
+    background:rgba(255,255,255,0.05);
+    padding:40px;
+    border-radius:25px;
+    backdrop-filter:blur(12px);
+}
+
+.form-box input,
+.form-box select{
+    width:100%;
+    padding:15px;
+    margin-top:15px;
+    border:none;
+    border-radius:12px;
+    background:rgba(255,255,255,0.1);
+    color:white;
+    font-size:15px;
+}
+
+.form-box input::placeholder{
+    color:#ddd;
+}
+
+.form-box button{
+    width:100%;
+    margin-top:20px;
+    padding:15px;
+    border:none;
+    border-radius:15px;
+    background:linear-gradient(45deg,#ffd700,#ffae00);
+    color:black;
+    font-weight:bold;
+    font-size:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.form-box button:hover{
+    transform:scale(1.03);
+}
+
+/* SYARAT */
+
+.syarat{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:20px;
+}
+
+.syarat-box{
+    background:#0c1e3d;
+    padding:25px;
+    border-radius:20px;
+}
+
+.syarat-box ul{
+    margin-top:15px;
+    line-height:2;
+}
+
+/* FOOTER */
+
+footer{
+    background:#030b18;
+    text-align:center;
+    padding:30px;
+    margin-top:50px;
+}
+
+footer p{
+    color:#aaa;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+    font-size:45px;
+}
+
+.hero h2{
+    font-size:24px;
+}
+
+.title{
+    font-size:30px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<h1>SPMB 2026/2027</h1>
+
+<h2>SMK Katolik 2 WR Soepratman Samarinda</h2>
+
+<p>
+Penerimaan Peserta Didik Baru dengan pendidikan modern,
+fasilitas lengkap, dan konsentrasi keahlian unggulan.
+</p>
+
+<div class="btn-group">
+
+<a href="#daftar" class="btn btn-daftar">
+DAFTAR SEKARANG
+</a>
+
+<a href="https://wa.me/6285332827652" class="btn btn-wa">
+WHATSAPP PANITIA
+</a>
+
+</div>
+
+</div>
+
+</header>
+
+<!-- JURUSAN -->
+
+<section>
+
+<h2 class="title">Konsentrasi Keahlian</h2>
+
+<div class="jurusan-container">
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2721/2721295.png">
+<h3>Teknik Komputer & Jaringan</h3>
+<p>Belajar jaringan komputer, hardware, server dan teknologi modern.</p>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/2785/2785819.png">
+<h3>Farmasi Klinis & Komunitas</h3>
+<p>Mempelajari ilmu kesehatan, obat dan pelayanan farmasi profesional.</p>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3135/3135706.png">
+<h3>Akuntansi & Keuangan</h3>
+<p>Belajar administrasi, keuangan, perpajakan dan laporan perusahaan.</p>
+</div>
+
+<div class="card">
+<img src="https://cdn-icons-png.flaticon.com/512/3774/3774299.png">
+<h3>Asisten Keperawatan</h3>
+<p>Mempelajari pelayanan kesehatan dan caregiver profesional.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- SYARAT -->
+
+<section>
+
+<h2 class="title">Syarat Pendaftaran</h2>
+
+<div class="syarat">
+
+<div class="syarat-box">
+
+<h3>Dokumen Persyaratan</h3>
+
+<ul>
+<li>Fotokopi Ijazah</li>
+<li>Fotokopi Akta Kelahiran</li>
+<li>Fotokopi Kartu Keluarga</li>
+<li>Pas Foto 3x4</li>
+<li>BPJS Kesehatan</li>
+<li>Formulir Pendaftaran</li>
+</ul>
+
+</div>
+
+<div class="syarat-box">
+
+<h3>Ekstrakurikuler</h3>
+
+<ul>
+<li>Bulu Tangkis</li>
+<li>Voli</li>
+<li>Futsal</li>
+<li>Tari Tradisional</li>
+<li>English Club</li>
+<li>Pramuka</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FORM -->
+
+<section id="daftar">
+
+<h2 class="title">Formulir Pendaftaran</h2>
+
+<div class="form-box">
+
+<input type="text" placeholder="Nama Lengkap">
+
+<input type="text" placeholder="Asal Sekolah">
+
+<select>
+<option>Pilih Jurusan</option>
+<option>TKJ</option>
+<option>Farmasi</option>
+<option>Akuntansi</option>
+<option>Asisten Keperawatan</option>
+</select>
+
+<input type="file">
+
+<input type="file">
+
+<button>KIRIM PENDAFTARAN</button>
+
+</div>
+
+</section>
+
+<footer>
+
+<h2>SMK Katolik 2 WR Soepratman Samarinda</h2>
+
+<p>
+Jl. WR. Supratman No.03 RT.07 Kel. Bugis,
+Kec. Samarinda Kota
+</p>
+
+<p style="margin-top:10px;">
+0853 3282 7652 | 0852 5047 0690 | 0878 1103 2298
+</p>
+
+</footer>
+
+</body>
+</html>
