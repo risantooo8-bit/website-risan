@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SMK Katolik 2 WR Soepratman Samarinda</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f7ff;
+color:#222;
+overflow-x:hidden;
+}
+
+/* NAVBAR */
+
+nav{
+width:100%;
+padding:18px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:fixed;
+top:0;
+z-index:1000;
+background:rgba(0,0,0,0.4);
+backdrop-filter:blur(10px);
+}
+
+.logo{
+color:white;
+font-size:28px;
+font-weight:700;
+}
+
+nav ul{
+display:flex;
+list-style:none;
+gap:30px;
+}
+
+nav ul li a{
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:0.3s;
+}
+
+nav ul li a:hover{
+color:#ffd700;
+}
+
+/* HERO */
+
+.hero{
+height:100vh;
+background:
+linear-gradient(rgba(0,0,0,0.55),rgba(0,0,0,0.65)),
+url('fak3.jpg');
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:20px;
+color:white;
+}
+
+.hero-content{
+max-width:900px;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:800;
+line-height:1.1;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+margin-bottom:35px;
+color:#f0f0f0;
+}
+
+.btn{
+display:inline-block;
+padding:15px 40px;
+background:linear-gradient(45deg,#ffd700,#ffb400);
+color:#000;
+text-decoration:none;
+font-weight:700;
+border-radius:50px;
+transition:0.4s;
+box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn:hover{
+transform:translateY(-5px);
+}
+
+/* SECTION */
+
+section{
+padding:90px 8%;
+}
+
+.title{
+text-align:center;
+margin-bottom:60px;
+}
+
+.title h2{
+font-size:45px;
+color:#0b2c6a;
+margin-bottom:10px;
+}
+
+.title p{
+color:#666;
+font-size:18px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.about-text h3{
+font-size:35px;
+margin-bottom:20px;
+color:#0b2c6a;
+}
+
+.about-text p{
+line-height:1.8;
+color:#555;
+}
+
+/* JURUSAN */
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px 25px;
+border-radius:25px;
+text-align:center;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+margin:20px 0 10px;
+font-size:24px;
+color:#0b2c6a;
+}
+
+.card p{
+color:#666;
+line-height:1.6;
+}
+
+/* GALLERY */
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:25px;
+}
+
+.gallery img{
+width:100%;
+height:280px;
+object-fit:cover;
+border-radius:25px;
+transition:0.4s;
+box-shadow:0 10px 25px rgba(0,0,0,0.15);
+}
+
+.gallery img:hover{
+transform:scale(1.04);
+}
+
+/* CONTACT */
+
+.contact{
+background:linear-gradient(135deg,#0b2c6a,#1746a2);
+padding:70px 30px;
+border-radius:35px;
+text-align:center;
+color:white;
+}
+
+.contact h2{
+font-size:45px;
+margin-bottom:20px;
+}
+
+.contact p{
+font-size:18px;
+margin:10px 0;
+}
+
+/* FOOTER */
+
+footer{
+background:#071b45;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:50px;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:45px;
+}
+
+.hero p{
+font-size:17px;
+}
+
+nav{
+flex-direction:column;
+gap:15px;
+}
+
+.title h2{
+font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<nav>
+
+<div class="logo">
+SMK Katolik 2
+</div>
+
+<ul>
+<li><a href="#home">Home</a></li>
+<li><a href="#tentang">Tentang</a></li>
+<li><a href="#jurusan">Jurusan</a></li>
+<li><a href="#galeri">Galeri</a></li>
+<li><a href="#kontak">Kontak</a></li>
+</ul>
+
+</nav>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+SMK Katolik 2 WR Soepratman
+</h1>
+
+<p>
+Sekolah modern dengan pendidikan berkualitas,
+berkarakter, disiplin, dan siap menghadapi dunia kerja.
+</p>
+
+<a href="#kontak" class="btn">
+Daftar Sekarang
+</a>
+
+</div>
+
+</section>
+
+<!-- TENTANG -->
+
+<section id="tentang">
+
+<div class="title">
+<h2>Tentang Sekolah</h2>
+<p>Membangun generasi unggul dan profesional</p>
+</div>
+
+<div class="about">
+
+<img src="fak1.jpg">
+
+<div class="about-text">
+
+<h3>Sekolah Modern dan Berprestasi</h3>
+
+<p>
+SMK Katolik 2 WR Soepratman Samarinda hadir sebagai sekolah
+yang mengutamakan kualitas pendidikan, karakter,
+dan pengembangan keterampilan siswa.
+Dengan fasilitas lengkap dan guru profesional,
+kami siap mencetak lulusan terbaik.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- JURUSAN -->
+
+<section id="jurusan">
+
+<div class="title">
+<h2>Program Keahlian</h2>
+<p>Pilih jurusan sesuai minat dan bakatmu</p>
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>Teknik Komputer & Jaringan</h3>
+<p>Mempelajari jaringan komputer, server, dan teknologi modern.</p>
+</div>
+
+<div class="card">
+<h3>Farmasi Klinis</h3>
+<p>Membekali siswa dengan ilmu kesehatan dan farmasi.</p>
+</div>
+
+<div class="card">
+<h3>Akuntansi</h3>
+<p>Belajar administrasi keuangan dan manajemen bisnis.</p>
+</div>
+
+<div class="card">
+<h3>Asisten Keperawatan</h3>
+<p>Mencetak tenaga kesehatan yang profesional dan disiplin.</p>
+</div>
+
+</div>
+
+</section>
+
+<!-- GALERI -->
+
+<section id="galeri">
+
+<div class="title">
+<h2>Galeri Sekolah</h2>
+<p>Kegiatan dan suasana sekolah</p>
+</div>
+
+<div class="gallery">
+
+<img src="fak1.jpg">
+<img src="fak2.jpg">
+<img src="fak3.jpg">
+<img src="fak4.jpg">
+
+</div>
+
+</section>
+
+<!-- KONTAK -->
+
+<section id="kontak">
+
+<div class="contact">
+
+<h2>Hubungi Kami</h2>
+
+<p>📍 Jl. WR. Soepratman No.03 Samarinda</p>
+
+<br>
+
+<p>📞 0853 3282 7652 (Bpk Simon)</p>
+<p>📞 0852 5047 0690 (Bu Lince)</p>
+<p>📞 0878 1103 2298 (Bu Lisa)</p>
+
+<br>
+
+<a href="#" class="btn">
+Formulir Pendaftaran
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 SMK Katolik 2 WR Soepratman Samarinda
+
+</footer>
+
+</body>
+</html>
